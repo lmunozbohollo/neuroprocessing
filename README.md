@@ -8,6 +8,8 @@ This repository is made up of a series of files, using Python language:
 
 * 'load_data.py' uploads a brain image and allows observation of the desired patient and slice, in one of planes x, y or z.
 
+![alt text](patient20_slice60z.png)
+![alt text](patient28_slice100z.png)
 
 ## Installation
 
@@ -20,3 +22,4 @@ pip install nibabel
 pip install matplotlib
 pip install PyQt5
 ```
+
