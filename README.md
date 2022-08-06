@@ -10,8 +10,8 @@ This repository is made up of a series of files, using Python language:
 
 
 <p float="left">
-  <img src="https://github.com/lmunozbohollo/neuroprocessing/blob/main/patient20_slice60z.png" width="500"/>
-  <img src="https://github.com/lmunozbohollo/neuroprocessing/blob/main/patient28_slice100y.png" width="500"/>
+  <img src="https://github.com/lmunozbohollo/neuroprocessing/blob/main/patient20_slice60z.png" width="400"/>
+  <img src="https://github.com/lmunozbohollo/neuroprocessing/blob/main/patient28_slice100y.png" width="400"/>
 </p>
 
 
