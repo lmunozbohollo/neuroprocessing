@@ -6,7 +6,7 @@ Uploading neuroimages for processing
 
 import nibabel as nib
 import matplotlib.pyplot as plt
-import PyQt5
+
 
 # select folder where the data is stored
 scan_number = 28
@@ -27,11 +27,28 @@ header=scan.header
 
 # to observe how many slices were taken in each direction
 shape=scan.shape
-print(shape)
+#print(shape)
 
 
-z_slice = 60
-plt.imshow(scan_data[:,:,z_slice]) # select the desired plane and slice on that plane
-plt.title('Scan from patient {}, z={}'.format(str(scan_number),z_slice))
+# select the desired plane and slice to view on that plane
+plane = input("Which plane do you want to view the slice in (x, y or z)? ")
+
+if plane == 'x':
+    x_slice = int(input("Which slice (0 to {}) would you like to observe? ".format(shape[0])))
+    plt.imshow(scan_data[x_slice,:,:]) 
+    plt.title('Scan from patient {}, x={}'.format(str(scan_number),x_slice))
+
+if plane == 'y':
+    y_slice = int(input("Which slice (0 to {}) would you like to observe? ".format(shape[1])))
+    plt.imshow(scan_data[:,y_slice,:]) 
+    plt.title('Scan from patient {}, y={}'.format(str(scan_number),y_slice))
+    
+if plane == 'z':
+    z_slice = int(input("Which slice (0 to {}) would you like to observe? ".format(shape[2])))
+    plt.imshow(scan_data[:,:,z_slice]) 
+    plt.title('Scan from patient {}, z={}'.format(str(scan_number),z_slice))
+
+else:
+    print("Sorry, that was not an option.")
+
 plt.show()
-# conseguir cambiar x e y tambien
