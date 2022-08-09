@@ -1,6 +1,6 @@
 # Neuroprocessing
 
-This repository stores examples of how hoq to code for processing of neuroimages.
+This repository stores examples of how to code for processing of neuroimages.
 
 Dataset 'FLAIR' obtained from biomedical-dynamics.teachable.com
 
