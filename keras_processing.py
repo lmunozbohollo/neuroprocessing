@@ -8,6 +8,7 @@ import skimage.transform as transf
 import matplotlib.pyplot as plt
 import numpy as np
 import random
+import tensorflow as tf
 
 from load_data import scan_data
 
@@ -61,5 +62,21 @@ noisy_scan = gauss_noise(normal_scan,noise_var)
  denoising using non local means
 """
 denoised_scan=denoise_nl_means(noisy_scan, 7, 5, 0.01, fast_mode=True,sigma=0.6)
-plt.imshow(denoised_scan[:,:,50])
-plt.title('Scan from patient 8, z=50, denoised')
+#plt.imshow(denoised_scan[:,:,50])
+#plt.title('Scan from patient 8, z=50, denoised')
+
+
+"""
+ crop a section of the image
+"""
+cropped_scan = tf.image.random_crop(scan_data,size=[128,128,128])
+#plt.imshow(cropped_scan[:,:,50])
+#plt.title('Scan from patient 8, z=50, cropped')
+
+
+"""
+ brighten the image
+"""
+brighter_scan = tf.image.random_brightness(scan_data, max_delta=0.5)
+plt.imshow(brighter_scan[:,:,50])
+plt.title('Scan from patient 8, z=50, brightened')
