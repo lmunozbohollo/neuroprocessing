@@ -2,7 +2,7 @@
 
 This repository stores examples of how to code for processing of neuroimages.
 
-Dataset 'FLAIR' obtained from biomedical-dynamics.teachable.com
+Dataset 'FLAIR' obtained from https://biomedical-dynamics.teachable.com
 
 This repository is made up of a series of files, using Python language:
 
