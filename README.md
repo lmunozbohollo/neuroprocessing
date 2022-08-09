@@ -25,5 +25,8 @@ Ensure the following packages are installed on your device so that the code runs
 pip install nibabel
 pip install matplotlib
 pip install PyQt5
+pip install torchvision
+pip install tensorflow
+pip install scikit-image
 ```
 
